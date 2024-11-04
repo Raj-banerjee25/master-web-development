@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="./assets/image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./footer.css">
+    <title>Master Web Development</title>
+
+    <style>
+        /* Add your existing styles here */
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        /* Additional navbar styles */
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ab45e7;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar Section -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
+<button class="top-btn" id="goToTopBtn" onclick="goToTop()"> 
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+    const goToTopBtn = document.getElementById("goToTopBtn");
+
+    window.onscroll = function () {
+        if (window.scrollY > 100) {
+            goToTopBtn.style.display = "flex"; // Use "flex" to center the icon
+        } else {
+            goToTopBtn.style.display = "none";
+        }
+    };
+
+    function goToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+
+<div class="icon">
+    <div class="icon2">
+        <button id="toggle-mode-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Profile Icon -->
+    <li class="nav-item no-underline">
+        <a href="./profile.html" class="profile-link" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="https://i.postimg.cc/NFFmtc9K/xnz-Mst5-V-400x400.jpg" alt="Profile Icon" style="width: 50px; height: 50px; border-radius: 50%; margin-top: -17px;">
+        </a>
+    </li>
+</div>
+
+<section id="projects">
+    <div class="projects-heading">
+        <p>Master Web Development</p>
+        <h3><span>Open</span> Projects</h3>
+
+        <button id="quiz-button" class="source-code

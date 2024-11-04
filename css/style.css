@@ -19,6 +19,7 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: #08ecbb #3c0751;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -105,7 +106,6 @@ body {
 }
 
 .projects-heading {
-    margin-top: 20px;
     text-align: center;
     color: #000;
 }
@@ -149,6 +149,7 @@ body {
 #quiz-button{
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 30px;
 }
 
 .source-code-btn {
@@ -173,7 +174,7 @@ body {
   display: flex;
   gap: 10px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
   align-items: center; 
   justify-content: center;
 }
